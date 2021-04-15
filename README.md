@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Customer Points
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A retailer offers a rewards program to its customers, awarding points based on each recorded purchase.
 
-## Available Scripts
+A customer receives 2 points for every dollar spent over $100 in each transaction, plus 1 point for every dollar spent over $50 in each transaction
+(e.g. a $120 purchase = 2x$20 + 1x$50 = 90 points).
 
-In the project directory, you can run:
+Given a record of every transaction during a three-month period, calculate the reward points earned for each customer per month and total.
 
-### `npm start`
+Check out this demo UI [here](https://customer-points-frontend.herokuapp.com/).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Backend
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Github repository: [https://github.com/abenzzine10/customerPointsBackend](https://github.com/abenzzine10/customerPointsBackend)
 
-### `npm test`
+Used **Spring Boot**.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A dataset of 20 customers and 100 purchases of random amounts was created as a demo in an H2 database. The purchases are recorded in the three-month period from 01/01/2021 to 03/31/2021.
 
-### `npm run build`
+There are two API endpoints:
+- customers endpoint: [https://customer-points-backend.herokuapp.com/customers](https://customer-points-backend.herokuapp.com/customers)
+- purchases endpoint: [https://customer-points-backend.herokuapp.com/purchases](https://customer-points-backend.herokuapp.com/purchases)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Github repository: [https://github.com/abenzzine10/customerPointsFrontend](https://github.com/abenzzine10/customerPointsFrontend)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Used **ReactJS**.
 
-### `npm run eject`
+Demo UI: [https://customer-points-frontend.herokuapp.com/](https://customer-points-frontend.herokuapp.com/)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Use the package manager [npm](https://www.npmjs.com/get-npm/) to install the app.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Dependencies
+- [React Table](https://js.coach/package/react-table) component to create the table of customers and purchases with sorting, filtering, and pagination.
+- [React CSV](https://js.coach/package/react-csv) component to export the tables as ".csv" files.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Author
+Ayoub Benzzine
